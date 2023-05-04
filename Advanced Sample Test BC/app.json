@@ -1,0 +1,28 @@
+{
+  "id": "f042e54f-6d61-4a29-959f-a813339ccf71",
+  "name": "Advanced Sample Test BC",
+  "publisher": "Juan Jose Hurtado Mejia",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "19.0.0.0",
+  "idRanges": [
+    {
+      "from": 50500,
+      "to": 50600
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  }
+}
