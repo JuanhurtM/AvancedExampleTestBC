@@ -5,6 +5,9 @@
     },
     {
       "path": "Advanced Sample Test BC"
+    },
+    {
+      "path": "AdvancedSampleTestBC.Test"
     }
   ],
   "settings": {}
