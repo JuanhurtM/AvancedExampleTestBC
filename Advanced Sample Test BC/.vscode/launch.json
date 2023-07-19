@@ -78,7 +78,7 @@
           "name": "Docker Virtual Machine",
           "type": "al",
           "request": "launch",
-          "server": "http://bc22",
+          "server": "http://bc22", 
           "serverInstance": "BC",
           "port": 7049,
           "tenant": "default",
@@ -87,6 +87,18 @@
           "startupObjectType": "Page",
           "schemaUpdateMode": "ForceSync",
           "breakOnError": true
-      }
+      },
+      {
+        "name": "Docker Juan Jose 2",
+        "type": "al",
+        "request": "launch",
+        "server": "http://bc/BC/", 
+        "serverInstance": "BC",
+        "port": 7049,
+        "tenant": "default",
+        "authentication": "UserPassword",
+        "schemaUpdateMode": "ForceSync",
+        "breakOnError": true
+    }
   ]
 }

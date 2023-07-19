@@ -22,6 +22,12 @@
       "name": "Any",
       "id": "e7320ebb-08b3-4406-b1ec-b4927d3e280b",
       "version": "21.0.0.0"
+    },
+    {
+      "publisher": "Juan Jose Hurtado Mejia",
+      "name": "Advanced Sample Test BC",
+      "id": "f042e54f-6d61-4a29-959f-a813339ccf71",
+      "version": "1.0.0.0"
     }
   ],
   "screenshots": [],
