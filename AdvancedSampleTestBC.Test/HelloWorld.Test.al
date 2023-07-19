@@ -8,6 +8,9 @@ codeunit 50800 "HelloWorld Test"
     var
         CustList: TestPage "Customer List";
     begin
+
+        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
+        LibraryLowerPermissions.SetO365BusFull();
         CustList.OpenView();
         CustList.Close();
         if (not MessageDisplayed) then
@@ -17,10 +20,11 @@ codeunit 50800 "HelloWorld Test"
     [MessageHandler]
     procedure HelloWorldMessageHandler(Message: Text[1024])
     begin
-        MessageDisplayed := MessageDisplayed or (Message = 'App published: Hello world');
+        MessageDisplayed := MessageDisplayed or (Message = 'App published: Hello worlds');
     end;
 
     var
         MessageDisplayed: Boolean;
+        LibraryLowerPermissions: Codeunit "Library - Lower Permissions";
 }
 

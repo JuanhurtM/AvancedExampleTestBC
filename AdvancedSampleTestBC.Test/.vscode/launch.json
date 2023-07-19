@@ -96,6 +96,7 @@
           "serverInstance": "BC",
           "port": 7049,
           "tenant": "default",
+          "startupObjectId": 130451,
           "authentication": "UserPassword",
           "schemaUpdateMode": "ForceSync",
           "breakOnError": true
