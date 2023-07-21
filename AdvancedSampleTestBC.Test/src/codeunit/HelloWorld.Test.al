@@ -20,7 +20,7 @@ codeunit 50800 "HelloWorld Test"
     [MessageHandler]
     procedure HelloWorldMessageHandler(Message: Text[1024])
     begin
-        MessageDisplayed := MessageDisplayed or (Message = 'App published: Hello worlds');
+        MessageDisplayed := MessageDisplayed or (Message = 'App published: Hello world');
     end;
 
     var

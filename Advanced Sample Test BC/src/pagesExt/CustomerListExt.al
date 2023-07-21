@@ -56,18 +56,18 @@ pageextension 50501 "Customer List Ext." extends "Customer List"
         Customers: Record Customer;
         RewardLevel: Text;
 
-    // trigger OnAfterGetRecord();
-    // var
-    //     CustomerRewardsMgtExt: Codeunit "Customer Rewards Ext. Mgt.";
-    // begin
-    //     // Get the reward level associated with reward points 
-    //     RewardLevel := CustomerRewardsMgtExt.GetRewardLevel(RewardPoints);
-    // end;
-
-    trigger OnOpenPage()
+    trigger OnAfterGetRecord();
     var
+        CustomerRewardsMgtExt: Codeunit "Customer Rewards Ext. Mgt.";
     begin
-        Message('App published: Hello world');
+        // Get the reward level associated with reward points 
+        RewardLevel := CustomerRewardsMgtExt.GetRewardLevel(RewardPoints);
     end;
+
+    // trigger OnOpenPage()
+    // var
+    // begin
+    //     Message('App published: Hello world');
+    // end;
 
 }
