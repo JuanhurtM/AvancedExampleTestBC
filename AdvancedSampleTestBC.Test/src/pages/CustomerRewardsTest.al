@@ -1,4 +1,5 @@
 codeunit 50803 "Customer Rewards Test"
+
 {
     // [FEATURE] [Customer Rewards] 
 
@@ -193,8 +194,6 @@ codeunit 50803 "Customer Rewards Test"
         Commit;
 
         // Using permissions that do not include SUPER 
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
-        LibraryLowerPermissions.SetO365BusFull();
         LibraryLowerPermissions.SetO365BusFull;
         Assert.IsFalse(CustomerRewardsExtMgt.IsCustomerRewardsActivated, NotActivatedTxt);
         MockCustomerRewardsExtMgt.MockActivationResponse(true);
@@ -244,8 +243,6 @@ codeunit 50803 "Customer Rewards Test"
         Commit;
 
         // Using permissions that do not include SUPER 
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
-        LibraryLowerPermissions.SetO365BusFull();
         LibraryLowerPermissions.SetO365BusFull;
         Assert.IsFalse(CustomerRewardsExtMgt.IsCustomerRewardsActivated, NotActivatedTxt);
         ActivateCustomerRewards;
@@ -315,8 +312,6 @@ codeunit 50803 "Customer Rewards Test"
         Commit;
 
         // Using permissions that do not include SUPER 
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
-        LibraryLowerPermissions.SetO365BusFull();
         LibraryLowerPermissions.SetO365BusFull;
         Assert.IsFalse(CustomerRewardsExtMgt.IsCustomerRewardsActivated, NotActivatedTxt);
         ActivateCustomerRewards;
@@ -366,8 +361,6 @@ codeunit 50803 "Customer Rewards Test"
         Commit;
 
         // Using permissions that do not include SUPER 
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
-        LibraryLowerPermissions.SetO365BusFull();
         LibraryLowerPermissions.SetO365BusFull;
         ActivateCustomerRewards;
 
@@ -397,8 +390,6 @@ codeunit 50803 "Customer Rewards Test"
         Commit;
 
         // Using permissions that do not include SUPER 
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
-        LibraryLowerPermissions.SetO365BusFull();
         LibraryLowerPermissions.SetO365BusFull;
         ActivateCustomerRewards;
 
@@ -432,8 +423,6 @@ codeunit 50803 "Customer Rewards Test"
         Commit;
 
         // Using permissions that do not include SUPER 
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
-        LibraryLowerPermissions.SetO365BusFull();
         LibraryLowerPermissions.SetO365BusFull;
         ActivateCustomerRewards;
         AddRewardLevel(BronzeLevelTxt, 2); // 2 points required for BRONZE level 
@@ -471,8 +460,6 @@ codeunit 50803 "Customer Rewards Test"
         Commit;
 
         // Using permissions that do not include SUPER 
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
-        LibraryLowerPermissions.SetO365BusFull();
         LibraryLowerPermissions.SetO365BusFull;
         ActivateCustomerRewards;
         AddRewardLevel(BronzeLevelTxt, 2); // 2 points required for BRONZE level 
@@ -506,8 +493,6 @@ codeunit 50803 "Customer Rewards Test"
         Commit;
 
         // Using permissions that do not include SUPER 
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
-        LibraryLowerPermissions.SetO365BusFull();
         LibraryLowerPermissions.SetO365BusFull;
         ActivateCustomerRewards;
         AddRewardLevel(BronzeLevelTxt, 2); // 2 points required for BRONZE level 
@@ -551,8 +536,6 @@ codeunit 50803 "Customer Rewards Test"
         Commit;
 
         // Using permissions that do not inlcude SUPER 
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
-        LibraryLowerPermissions.SetO365BusFull();
         LibraryLowerPermissions.SetO365BusFull;
         ActivateCustomerRewards;
         AddRewardLevel(BronzeLevelTxt, 2); // 2 points required for BRONZE level 
@@ -609,8 +592,6 @@ codeunit 50803 "Customer Rewards Test"
         ActivationCodeInfo: Record "Activation Code Information";
 
     begin
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
-        LibraryLowerPermissions.SetO365BusFull();
         ActivationCodeInfo.Init;
         ActivationCodeInfo.ActivationCode := '12345678901234';
         ActivationCodeInfo."Date Activated" := Today;
@@ -668,5 +649,4 @@ codeunit 50803 "Customer Rewards Test"
     procedure RewardsLevelListlPageHandler(var RewardsLevelList: TestPage "Rewards Level List");
     begin
     end;
-
 }
