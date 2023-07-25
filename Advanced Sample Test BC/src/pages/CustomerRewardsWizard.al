@@ -192,7 +192,7 @@ page 50500 "Customer Rewards Wizard"
                     if CustomerRewardsExtMgt.ActivateCustomerRewards(ActivationCode) then
                         NextStep(false)
                     else
-                        Error('Activation failed. Please check the activtion code you entered.');
+                        Error('Activation failed. Please check the activation code you entered.');
                 end;
             }
 

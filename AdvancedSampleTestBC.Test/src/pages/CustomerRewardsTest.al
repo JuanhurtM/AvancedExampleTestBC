@@ -167,6 +167,9 @@ codeunit 50803 "Customer Rewards Test"
         Commit;
 
         // Using permissions that do not include SUPER 
+        // LibraryLowerPermissions.SetO365BusFull;
+        LibraryLowerPermissions.SetExactPermissionSet('Gen Permission App');
+        //LibraryLowerPermissions.SetExactPermissionSet('PermissionTest');
         LibraryLowerPermissions.SetO365BusFull;
         Assert.IsFalse(CustomerRewardsExtMgt.IsCustomerRewardsActivated, NotActivatedTxt);
         MockCustomerRewardsExtMgt.MockActivationResponse(false);
@@ -177,7 +180,7 @@ codeunit 50803 "Customer Rewards Test"
 
         // [Then] Error message displayed 
         asserterror CustomerRewardsWizardTestPage.ActionActivate.Invoke;
-        Assert.AreEqual(GETLASTERRORTEXT, 'Activation failed. Please check the activtion code you entered.', 'Invalid error message.');
+        Assert.AreEqual(GETLASTERRORTEXT, 'Activation failed. Please check the activation code you entered.', 'Invalid error message.');
         Assert.IsFalse(CustomerRewardsExtMgt.IsCustomerRewardsActivated, NotActivatedTxt);
     end;
 
@@ -577,6 +580,7 @@ codeunit 50803 "Customer Rewards Test"
         ActivationCodeInfo: Record "Activation Code Information";
         RewardLevel: Record "Reward Level";
         Customer: Record Customer;
+        LibraryLowerPermissions: Codeunit "Library - Lower Permissions";
 
     begin
         Customer.ModifyAll(RewardPoints, 0);

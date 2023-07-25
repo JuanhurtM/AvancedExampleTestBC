@@ -9,7 +9,7 @@ codeunit 50800 "HelloWorld Test"
         CustList: TestPage "Customer List";
     begin
 
-        LibraryLowerPermissions.SetExactPermissionSet('GeneratedPermission');
+        LibraryLowerPermissions.SetExactPermissionSet('GenPermissionApp');
         LibraryLowerPermissions.SetO365BusFull();
         CustList.OpenView();
         CustList.Close();
