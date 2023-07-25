@@ -1,6 +1,7 @@
 codeunit 50800 "HelloWorld Test"
 {
     Subtype = Test;
+    TestPermissions = Disabled;
 
     [Test]
     [HandlerFunctions('HelloWorldMessageHandler')]

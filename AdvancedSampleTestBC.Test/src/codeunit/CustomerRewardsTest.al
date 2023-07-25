@@ -163,14 +163,17 @@ codeunit 50803 "Customer Rewards Test"
     begin
         // [Scenario] Error message when user tries to activate Customer Rewards with invalid activation code. 
         // [Given] The Customer Rewards Wizard 
+        LibraryLowerPermissions.SetExactPermissionSet('Gen Permission App');
+        LibraryLowerPermissions.SetO365BusFull;
+
         Initialize;
         Commit;
 
         // Using permissions that do not include SUPER 
         // LibraryLowerPermissions.SetO365BusFull;
-        LibraryLowerPermissions.SetExactPermissionSet('Gen Permission App');
+
         //LibraryLowerPermissions.SetExactPermissionSet('PermissionTest');
-        LibraryLowerPermissions.SetO365BusFull;
+
         Assert.IsFalse(CustomerRewardsExtMgt.IsCustomerRewardsActivated, NotActivatedTxt);
         MockCustomerRewardsExtMgt.MockActivationResponse(false);
 
