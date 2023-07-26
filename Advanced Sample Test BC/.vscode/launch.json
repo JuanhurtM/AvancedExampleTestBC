@@ -83,7 +83,6 @@
             "port": 7049,
             "tenant": "default",
             "authentication": "UserPassword",
-            "startupObjectId": 130451,
             "startupObjectType": "Page",
             "schemaUpdateMode": "ForceSync",
             "breakOnError": true
